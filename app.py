@@ -91,5 +91,5 @@ def app():
             st.warning("Please generate descriptions and a prompt first.")
 
 if __name__ == "__main__":
-    auth_token.authenticate();
+    auth_token.authentication();
     app();

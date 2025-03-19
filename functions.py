@@ -5,7 +5,7 @@ import numpy as np
 from PIL import Image as im
 import os
 import markdown2
-from vertexai.preview.vision_models import (
+from vertexai.vision_models import (
     Image,
     ImageGenerationModel,
     SubjectReferenceImage,
@@ -15,8 +15,10 @@ from vertexai.generative_models import Image as image_gen
 import vertexai
 
 # --- Project Setup (Move to top for clarity) ---
-PROJECT_ID = "heroprojectlivedemo"  # Replace with your project ID if different
-LOCATION = "us-central1"  # Replace with your location if different
+# PROJECT_ID = "heroprojectlivedemo"  # Replace with your project ID if different
+# LOCATION = "us-central1"  # Replace with your location if different
+ROJECT_ID = os.environ.get("PROJECT_ID", "heroprojectlivedemo")  # Get from env or default
+LOCATION = os.environ.get("LOCATION", "us-central1")  # Get from env or default
 vertexai.init(project=PROJECT_ID, location=LOCATION)
 
 # --- Helper Functions ---
