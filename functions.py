@@ -8,7 +8,6 @@ import markdown2
 from vertexai.preview.vision_models import (
     Image,
     ImageGenerationModel,
-    StyleReferenceImage,
     SubjectReferenceImage,
 )
 from vertexai.generative_models import GenerativeModel, Part
